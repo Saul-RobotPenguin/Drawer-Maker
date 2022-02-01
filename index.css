@@ -1,0 +1,26 @@
+/**
+ * Radial cursor
+ */
+#mouse-circle {
+  position: absolute;
+  width: 64px;
+  height: 64px;
+  margin: -32px 0 0 -32px;
+  border: 1px solid #0f1c64;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.color-button {
+  height: auto;
+  width: auto;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+  background-image: none;
+  border: 0 none;
+  padding: 1px !important;
+}

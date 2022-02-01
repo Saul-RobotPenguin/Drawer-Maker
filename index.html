@@ -5,13 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Painting Website</title>
-  </head>
+    <link rel="stylesheet" href="index.css">
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+ <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</head>
   <body>
-    <button id="clear">Clear</button>
-    <input id="hex" placeholder="enter a hex color" > </input>
+   
+<fieldset>
+ 
+
+    <nav class="navbar navbar-light bg-light">
+      <legend>Drawing Website</legend>
+      <div class="container-fluid">
+        <div class="container">
+      <input type="color" id="hex" placeholder="Enter A Hex Color" > </input>
+   
+        <button id="black" class="black color-button" value="#000000"><image src="images/black.png" width="32px" height="32px"></image></button>
+
+        <button id="red" class="red color-button" value="#880015"><image src="images/maroon5.png" width="32px" height="32px"></image></button>
+
+    
+   
+        <button id="eraser">Eraser</button>
+        <button id="clear">Clear The Canvas</button>
+         </div>
+      </div>
+    </nav>
+  </fieldset>
+
     <canvas id="draw"></canvas>
 
-   
+    <div id="mouse-circle"></div>
+    <div class="container">
+      <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <div class="col-md-4 d-flex align-items-center">
+          <a href="/" class="mb-3 me-2 mb-md-0 text-muted text-decoration-none lh-1">
+            <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"/></svg>
+          </a>
+          <span class="text-muted">Developed and Designed By Saul.C</span>
+        </div>
+    
+      </footer>
+    </div>
+    </div>
 
     <script src="main.js"></script>
   </body>
