@@ -11,6 +11,15 @@
   pointer-events: none;
 }
 
+.colorSet1 {
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+.colorSet2 {
+  margin-top: 10px;
+  margin-bottom: 25px;
+}
+
 .color-button {
   height: auto;
   width: auto;
@@ -23,4 +32,20 @@
   background-image: none;
   border: 0 none;
   padding: 1px !important;
+}
+
+.color-button:active {
+  transform: translate(0px, 5px);
+  -webkit-transform: translate(0px, 5px);
+  box-shadow: 0px 1px 0px 0px;
+}
+.color-button:hover {
+  transform: scale(1.8);
+}
+
+.tools {
+  margin-top: 25px;
+}
+.tool-buttons {
+  margin: 5px;
 }

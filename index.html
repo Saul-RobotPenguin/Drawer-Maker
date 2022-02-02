@@ -13,28 +13,53 @@
 </head>
   <body>
    
-<fieldset>
- 
-
-    <nav class="navbar navbar-light bg-light">
-      <legend>Drawing Website</legend>
+ <div class="container d-flex  justify-content-center align-items-center  bg-light ">
+    <nav class="navbar navbar-light  d-flex  justify-content-center align-items-center">
+      <h1>Drawing Website</h1>
       <div class="container-fluid">
         <div class="container">
-      <input type="color" id="hex" placeholder="Enter A Hex Color" > </input>
+          <div class="container">
    
-        <button id="black" class="black color-button" value="#000000"><image src="images/black.png" width="32px" height="32px"></image></button>
+   <div class="container d-flex  justify-content-center align-items-center colorSet1 ">
+        <button id="black" class="color-button" ><image src="images/black.png" width="32px" height="32px"></image></button>
+        <button id="gray" class="color-button" ><image src="images/gray.png" width="32px" height="32px"></image></button>
+        <button id="maroon5" class="color-button" ><image src="images/maroon5.png" width="32px" height="32px"></image></button>
+        <button id="red" class="color-button"><image src="images/red.png" width="32px" height="32px"></image></button>
+        <button id="orange" class=" color-button"><image src="images/orange.png" width="32px" height="32px"></image></button>
+        <button id="yellow" class="color-button"><image src="images/yellow.png" width="32px" height="32px"></image></button>
+        <button id="green" class="color-button"><image src="images/green.png" width="32px" height="32px"></image></button>
+        <button id="skyblue" class="color-button"><image src="images/skyblue.png" width="32px" height="32px"></image></button>
+        <button id="indigo" class="color-button"><image src="images/indigo.png" width="32px" height="32px"></image></button>
+        <button id="purple" class="color-button"><image src="images/purple.png" width="32px" height="32px"></image></button>
+        </div>
+        <div class="container d-flex  justify-content-center align-items-center colorSet2">
+          <button id="white" class="color-button"><image src="images/white.png" width="32px" height="32px"></image></button>
+          <button id="light-gray" class="color-button"><image src="images/light-gray.png" width="32px" height="32px"></image></button>
+          <button id="brown" class="color-button"><image src="images/brown.png" width="32px" height="32px"></image></button>
+          <button id="rose-quartz" class="color-button"><image src="images/rose-quartz.png" width="32px" height="32px"></image></button>
+          <button id="dark-orange" class="color-button"><image src="images/dark-orange.png" width="32px" height="32px"></image></button>
+          <button id="vanilla" class="color-button"><image src="images/vanilla.png" width="32px" height="32px"></image></button>
+          <button id="lime" class="color-button"><image src="images/lime.png" width="32px" height="32px"></image></button>
+          <button id="light-skyblue" class="color-button"><image src="images/light-skyblue.png" width="32px" height="32px"></image></button>
+          <button id="light-indigo" class="color-button"><image src="images/light-indigo.png" width="32px" height="32px"></image></button>
+          <button id="lilac" class="color-button"><image src="images/lilac.png" width="32px" height="32px"></image></button>
+       
+        </div>
 
-        <button id="red" class="red color-button" value="#880015"><image src="images/maroon5.png" width="32px" height="32px"></image></button>
-
-    
+     </div>
+     
+     <div class="container d-flex  justify-content-center align-items-center tools">  
+      <input class=" tool-buttons" type="color" id="hex" placeholder="Enter A Hex Color" ></input>
+      <button  class=" tool-buttons" id="eraser">Eraser</button>
+      <button class=" tool-buttons" id="clear">Clear The Canvas</button>
+ 
+    </div>
    
-        <button id="eraser">Eraser</button>
-        <button id="clear">Clear The Canvas</button>
          </div>
       </div>
     </nav>
-  </fieldset>
-
+  </div>
+<div class="canvasContainer">
     <canvas id="draw"></canvas>
 
     <div id="mouse-circle"></div>
@@ -47,6 +72,7 @@
           <span class="text-muted">Developed and Designed By Saul.C</span>
         </div>
     
+      </div>
       </footer>
     </div>
     </div>
