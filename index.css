@@ -1,6 +1,4 @@
-/**
- * Radial cursor
- */
+/* Circle cursor functionality */
 #mouse-circle {
   position: absolute;
   width: 64px;

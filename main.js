@@ -2,6 +2,10 @@ const canvas = document.getElementById("draw");
 const clear = document.getElementById("clear");
 const eraser = document.getElementById("eraser");
 const context = canvas.getContext("2d");
+const downloadImageButton = document.getElementById("download");
+
+//name for thickness of line
+const lineSize = document.querySelector(".line-size-options");
 
 //buttons variables for colors
 const blackButton = document.getElementById("black");
@@ -39,7 +43,6 @@ function setPosition(e) {
   pos.y = e.clientY;
 }
 
-///
 ///Mouse Hover Effect
 document.addEventListener("DOMContentLoaded", () => {
   mouseCircle = document.getElementById("mouse-circle");
@@ -58,14 +61,14 @@ document.addEventListener("DOMContentLoaded", () => {
     revisedPosX += (pos.x - revisedPosX) / delay;
     revisedPosY += (pos.y - revisedPosY) / delay;
 
-    mouseCircle.style.top = revisedPosY + 170 + "px";
+    mouseCircle.style.top = revisedPosY + 290 + "px";
     mouseCircle.style.left = revisedPosX + "px";
   }
   delayMouseFollow();
 });
 ///
 
-//Drawing
+//Drawing Functionality
 function draw(e) {
   if (e.buttons !== 1) return;
 
@@ -170,6 +173,10 @@ function draw(e) {
   context.beginPath();
 
   context.lineWidth = 5;
+
+  //Depending of selected options bar, the value would change according to the users selected value
+  let line = lineSize.options[lineSize.selectedIndex].value;
+  context.lineWidth = line;
   context.lineCap = "round";
   context.strokeStyle = color;
 
@@ -187,7 +194,7 @@ function clearCanvas() {
   context.clearRect(0, 0, canvas.width, canvas.height);
 }
 
-//Eraser
+//Eraser Tool Functionality
 
 eraser.addEventListener("click", Erase);
 
@@ -195,20 +202,23 @@ function Erase() {
   context.globalCompositeOperation = "destination-out";
 }
 
-//change Colors
+//Download Canvas Image
+downloadImageButton.addEventListener("click", downloadUsersArt);
+function downloadUsersArt() {
+  // get canvas data
+  let usersImage = canvas.toDataURL();
 
-// redButton.addEventListener("click", changeColorToRed);
-// function changeColorToRed() {
-//   let color = document.getElementById("red").value;
-//   context.strokeStyle = color;
-//   console.log(color);
+  // create link
+  let link = document.createElement("a");
+  link.download = "image.png"; // set the name of the download file
+  link.href = usersImage;
 
-//   context.strokeStyle = color;
-//   console.log(color);
-//   return color;
-// }
+  // temporarily add link to body and initiate the download
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
 
-//Event listeners
 window.addEventListener("resize", resize);
 
 document.addEventListener("mousemove", draw);
