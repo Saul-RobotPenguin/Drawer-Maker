@@ -73,101 +73,145 @@ function draw(e) {
   if (e.buttons !== 1) return;
 
   let color = document.getElementById("hex").value;
+  document.getElementById("hex").onchange = function () {
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
+  };
 
   //Change value of color depending which button is clicked
   blackButton.onclick = function () {
     color = "#000000";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   grayButton.onclick = function () {
     color = "#7f7f7f";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   maroon5Button.onclick = function () {
     color = "#880015";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   redButton.onclick = function () {
     color = "#ed1c24";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   orangeButton.onclick = function () {
     color = "#ff7f27";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   yellowButton.onclick = function () {
     color = "#fff200";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   greenButton.onclick = function () {
     color = "#22b14c";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
   skyblueButton.onclick = function () {
     color = "#00a2e8";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   indigoButton.onclick = function () {
     color = "#3f48cc";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   purpleButton.onclick = function () {
     color = "#a349a4";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   whiteButton.onclick = function () {
     color = "#ffffff";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   lightGreyButton.onclick = function () {
     color = "#c3c3c3";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   brownButton.onclick = function () {
     color = "#b97a57";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   roseQuartzButton.onclick = function () {
     color = "#ffaec9";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   darkOrangeButton.onclick = function () {
     color = "#ffc90e";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
   vanillaButton.onclick = function () {
     color = "#efe4b0";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
   limeButton.onclick = function () {
     color = "#b5e61d";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   lightSkyBlueButton.onclick = function () {
     color = "#99d9ea";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
   lightIndigoButton.onclick = function () {
     color = "#7092be";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
   lilacButton.onclick = function () {
     color = "#c8bfe7";
     document.getElementById("hex").value = color;
+    context.strokeStyle = color;
+    context.globalCompositeOperation = "source-over";
   };
 
   context.beginPath();
